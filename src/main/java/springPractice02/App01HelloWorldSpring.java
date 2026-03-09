@@ -2,6 +2,8 @@ package springPractice02;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
+import java.util.Arrays;
+
 public class App01HelloWorldSpring {
     public static void main (String[] args){
 
@@ -24,7 +26,14 @@ public class App01HelloWorldSpring {
         System.out.println(context.getBean("address2"));
 
         // You can extract bean by specifying the type
-        //         System.out.println(context.getBean(Address.class));
+        System.out.println(context.getBean(Address.class));
 
+        // List down all spring beans
+        System.out.println(context.getBeanDefinitionCount());
+
+        // Display all beans
+        System.out.println("Display all beans");
+        Arrays.stream(context.getBeanDefinitionNames()).forEach(System.out::println);
+//        System.out.println(context.getBeanDefinitionNames());
     }
 }
