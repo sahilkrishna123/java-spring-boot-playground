@@ -37,7 +37,7 @@ class BusinessClass{
 //        this.dependency2 = dependency2;
 //    }
 
-    public String toString(){
+    public String toString() {
         return "Using " + dependency1 + " and " + dependency2;
     }
 }
